@@ -2,19 +2,19 @@
 #BY: Richard Cross
 
 from turtle import Turtle, Screen
-Screen = Screen()
+screen = Screen()
 POS = [(0, 0) (-20, 0), (-40, 0)]
-move_distance = 20
-up = 90
-down = 270
-left = 180
-right = 0
+MOVE_DIST = 20
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
 # creating the snake class
 class Snake:
     def __init__(self):
         self.snake_Len = []
         self.create_snake()
-        self.head = self.snake_Len[0]
+        self.head=self.snake_Len[0]
         
         
     def create_snake(self):
@@ -22,7 +22,7 @@ class Snake:
             self.add_snake(i)
     
     def add_snake(self,i):
-        snake_create = Turtle("square")
+        snake_create = Turtle(shape="square")
         snake.create.penup()
         snake_create.color("black")
         snake.create.setpos(i)
@@ -45,5 +45,12 @@ class Snake:
     def down(self):
         if self.head.heading() != UP:
             self.head.setheading(DOWN)
+    
+    def left(self):
+        if self.head.heading() != RIGHT:
+            self.head.setheading(LEFT)
             
+    def right(self):
+        if self.head.heading() != LEFT:
+            self.head.setheading(RIGHT)
     
