@@ -11,7 +11,7 @@ left = 180
 right = 0
 # creating the snake class
 class Snake:
-    def__init__(self):
+    def __init__(self):
         self.snake_Len = []
         self.create_snake()
         self.head = self.snake_Len[0]
